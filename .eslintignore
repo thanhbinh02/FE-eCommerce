@@ -1,0 +1,10 @@
+build
+dist
+node_modules
+*.test.js
+vite.config.ts
+postcss.config.js
+tailwind.config.js
+src/App.css
+src/index.css
+src/styles
