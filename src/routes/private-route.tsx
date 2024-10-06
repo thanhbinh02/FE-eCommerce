@@ -12,11 +12,12 @@ type Props = {
 const PrivateRoute = ({ children }: Props) => {
   const { tokens, resetToken } = useAppLocalStorage();
 
-  return tokens && !resetToken ? (
-    children
-  ) : (
-    <Navigate to={LOGIN_PATH} replace />
-  );
+  // return tokens && !resetToken ? (
+  //   children
+  // ) : (
+  //   <Navigate to={LOGIN_PATH} replace />
+  // );
+  return children
 };
 
 export default PrivateRoute;

@@ -6,8 +6,13 @@ import { MdDashboard } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 import { TNavigationMenu, TypeRoutes } from "./types";
-import { USER_NAME, USERS_PATH } from "@/features/user";
-import { DashboardPage, UsersPage } from "@/pages";
+import { CUSTOMER_NAME, CUSTOMERS_PATH } from "@/features/customer";
+import {
+  CreateCustomerPage,
+  CustomerDetailsPage,
+  CustomersPage,
+  DashboardPage,
+} from "@/pages";
 import PrivateRoute from "@/routes/private-route";
 import { capitalizeFirstLetter } from "@/utils";
 
@@ -19,10 +24,20 @@ const navigationMenus: TNavigationMenu[] = [
     icon: <MdDashboard size={18} />,
   },
   {
-    key: USERS_PATH,
-    label: USER_NAME,
-    element: <UsersPage />,
+    key: CUSTOMERS_PATH,
+    label: `Danh sách ${CUSTOMER_NAME}`,
+    element: <CustomersPage />,
     icon: <FaUser size={18} />,
+    children: [
+      {
+        key: "/:id",
+        element: <CustomerDetailsPage />,
+      },
+      {
+        key: "/create",
+        element: <CreateCustomerPage />,
+      },
+    ],
   },
 ];
 

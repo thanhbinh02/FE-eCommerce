@@ -6,7 +6,7 @@ import { useNavigationMenu } from "./navigation";
 import PrivateRoute from "./private-route";
 import { LOGIN_PATH } from "@/features/auth";
 import LayoutComponent from "@/layout";
-import { LoginPage, NotFoundPage } from "@/pages";
+import { NotFoundPage } from "@/pages";
 
 const RenderRouter: FC = () => {
   const { routeList } = useNavigationMenu();
@@ -15,7 +15,6 @@ const RenderRouter: FC = () => {
     () => [
       {
         path: LOGIN_PATH,
-        element: <LoginPage />,
       },
       {
         path: "/",
