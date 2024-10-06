@@ -25,7 +25,7 @@ export type TDataAddResponse = {
 };
 
 export type ListData<T> = {
-  data: T[];
+  list: T[];
   message: string;
   offset: number;
   page_size: number;
@@ -56,7 +56,7 @@ export type ResponseData<T> = {
 // Ex: const obj = {name: "Nam", age: 12 } => type = "name" | "age"
 export type FlattenKeys<T> = keyof T;
 
-export type ResponseError<T> = AxiosError<{
-  message: T;
+export type ResponseError = AxiosError<{
+  message: string;
   status_code: number;
 }>;
