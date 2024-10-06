@@ -3,7 +3,7 @@ export const COLOR = {
   LOCKED: "#FF3F30",
   PAUSE: "#FA8C16",
   DISABLED: "#96969B",
-  PRIMARY: "#E61E2B",
+  PRIMARY: "#4F75FF",
   EXPORT: "#0F7E4F",
   WHITE: "#fff",
   PASTEL_GREEN: "#D2FFE2",
