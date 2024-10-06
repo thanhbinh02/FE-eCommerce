@@ -26,9 +26,7 @@ export const createActionColumn = <T extends { id: number | string }>(
   align: "center",
   fixed: "right",
   width: width,
-  render: (record: T) => (
-    <CommonButton action="view" href={`${PATH}/${record.id}`} />
-  ),
+  render: (record: T) => <CommonButton action="view" href={`${record.id}`} />,
 });
 
 export const createTimestampColumn = <T extends object>(
